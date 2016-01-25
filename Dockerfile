@@ -20,7 +20,7 @@ ADD tomcat  /usr/local/
 #EXPOSE 8080 
 
 #========= Add Entry Point ==========
-COPY shell /
+ADD shell /
 RUN ls /
 RUN ls /shell
 RUN chmod a+x /shell/*
