@@ -27,7 +27,6 @@
   <!.. ..> that surrounds them.
 -->
 <!-- -->
-  <role rolename="admin"/>  
   <role rolename="manager-gui"/>  
   <role rolename="manager-script"/>  
   <user username="admin" password="NeverSayGoodbye" roles="manager-gui,manager-script"/>

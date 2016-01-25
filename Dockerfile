@@ -1,6 +1,6 @@
 # Version 1.0.0
 #========== Basic Image ==========
-From tomcat
+From tomcat:8
 MAINTAINER "DreamInSun"
 
 #========== Environment ==========
@@ -14,6 +14,8 @@ MAINTAINER "DreamInSun"
 #========== Install Application ==========
 ADD tomcat  /usr/local/tomcat
 RUN chmod a+x /usr/local/tomcat/bin/catalina.sh
+RUN rm -rf /usr/local/tomcat/webapps/docs
+RUN rm -rf /usr/local/tomcat/webapps/examples
 
 #========== Expose Ports ==========
 #EXPOSE 8080 
