@@ -13,14 +13,13 @@ MAINTAINER "DreamInSun"
 
 #========== Install Application ==========
 ADD tomcat  /usr/local/tomcat
+RUN chmod a+x /usr/local/tomcat/bin/catalina.sh
 
 #========== Expose Ports ==========
 #EXPOSE 8080 
 
 #========= Add Entry Point ==========
 ADD shell /shell
-RUN ls /
-RUN ls /shell
 RUN chmod a+x /shell/*
 
 #========= Start Service ==========
