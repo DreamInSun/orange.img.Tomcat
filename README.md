@@ -7,5 +7,4 @@ This is a Optimized Tomcat Image For Servlet Docker Usage
 JVM启动参数调整
 最大线程数
 NIO方式
-
-内含管理账户
+ 
