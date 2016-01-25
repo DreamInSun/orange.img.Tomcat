@@ -6,20 +6,20 @@ MAINTAINER "DreamInSun"
 #========== Environment ==========
 
 #========== Configuration ==========
+#ENV JAVA_OPTS_XMS           128M
+#ENV JAVA_OPTS_XMX           512M
+#ENV JAVA_OPTS_PERM_SIZE      64M
+#ENV JAVA_OPTS_PERM_SIZE_MAX 128M
 
 #========== Install Application ==========
-WORKDIR /usr/local/tomcat
-ADD ./tomcat/conf/server.xml  ./conf/server.xml
-ADD ./tomcat/conf/web.xml     ./conf/web.xml
+ADD ./tomcat/conf/server.xml          /usr/local/tomcat 
 
 #========== Expose Ports ==========
 EXPOSE 8080 
 
-#========= RUN ==========
-ADD ./shell/docker-entry.sh /
-RUN chmod a+x /docker-entry.sh
+#========= Add Entry Point ==========
+ADD ./shell /
+RUN chmod a+x /shell/*.sh
 
 #========= Start Service ==========
-ENTRYPOINT ["/docker-entry.sh"]
-
-#CMD ["catalina.sh", "run"]
+ENTRYPOINT ["/shell/docker-entrypoint.sh"] 
