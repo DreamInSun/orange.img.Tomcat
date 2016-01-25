@@ -12,13 +12,13 @@ MAINTAINER "DreamInSun"
 #ENV JAVA_OPTS_PERM_SIZE_MAX 128M
 
 #========== Install Application ==========
-ADD ./tomcat/conf/*          /usr/local/tomcat/
+COPY ./tomcat/conf/*          /usr/local/tomcat/
 
 #========== Expose Ports ==========
-EXPOSE 8080 
+#EXPOSE 8080 
 
 #========= Add Entry Point ==========
-ADD ./shell/* /
+COPY ./shell/* /
 RUN chmod a+x /shell/*.sh
 
 #========= Start Service ==========
