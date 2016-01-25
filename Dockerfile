@@ -13,7 +13,6 @@ MAINTAINER "DreamInSun"
 
 #========== Install Application ==========
 ADD tomcat  /usr/local/tomcat
-RUN cat /usr/local/tomcat/bin/catalina.sh
 
 #========== Expose Ports ==========
 #EXPOSE 8080 
