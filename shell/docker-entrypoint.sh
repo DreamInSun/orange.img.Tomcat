@@ -17,4 +17,4 @@ echo ========== Initialize Database ==========
 echo ========== Database Configuration ========== 
 
 echo ========== Start Application ==========
-bash $CATALINA_BASE/bin/startup.sh
+bash $CATALINA_BASE/bin/catalina.sh run
