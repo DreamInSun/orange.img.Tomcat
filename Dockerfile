@@ -1,4 +1,6 @@
 # Version 1.0.0
+# cyan.img.Tomcat
+
 #========== Basic Image ==========
 From tomcat:8
 MAINTAINER "DreamInSun"
@@ -10,6 +12,9 @@ MAINTAINER "DreamInSun"
 #ENV JAVA_OPTS_XMX           512M
 #ENV JAVA_OPTS_PERM_SIZE      64M
 #ENV JAVA_OPTS_PERM_SIZE_MAX 128M
+
+ENV SERVICE_VERSION   LTS 
+ENV PROFILE           product
 
 #========== Install Application ==========
 ADD tomcat  /usr/local/tomcat
