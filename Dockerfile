@@ -6,6 +6,7 @@ From tomcat:8
 MAINTAINER "DreamInSun"
 
 #========== Environment ==========
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 #========== Configuration ==========
 #ENV JAVA_OPTS_XMS           128M
