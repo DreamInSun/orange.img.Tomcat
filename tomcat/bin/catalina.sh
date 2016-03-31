@@ -98,7 +98,7 @@
 # -----------------------------------------------------------------------------
 
 
-JAVA_OPTS="$JAVA_OPTS -server -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Xms512m -Xmx1024m -XX:PermSize=64M -XX:MaxPermSize=256M"
+JAVA_OPTS="$JAVA_OPTS -server -Djava.awt.headless=true -Duser.timezone=GMT+08 -Dfile.encoding=UTF-8 -Xms512m -Xmx1024m -XX:PermSize=64M -XX:MaxPermSize=256M"
 
 
 # OS specific support.  $var _must_ be set to either true or false.
