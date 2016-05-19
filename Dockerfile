@@ -18,7 +18,7 @@ ENV SERVICE_VERSION   LTS
 ENV PROFILE           product
 
 #========== System Optimization ==========
-RUN ulimit -u 10000
+RUN ulimit -HSn 4096  
 
 #========== Install Application ==========
 ADD tomcat  /usr/local/tomcat
