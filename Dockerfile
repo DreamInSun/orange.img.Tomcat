@@ -17,6 +17,9 @@ RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ENV SERVICE_VERSION   LTS 
 ENV PROFILE           product
 
+#========== System Optimization ==========
+RUN ulimit -u 10000
+
 #========== Install Application ==========
 ADD tomcat  /usr/local/tomcat
 RUN chmod a+x /usr/local/tomcat/bin/catalina.sh
