@@ -1,4 +1,9 @@
 #!/bin/sh
+
+
+echo ========== Synchornize System ==========
+#ntpdate us.pool.ntp.org
+
 echo ========== Set Up Environment ==========
 export JRE_HOME=/usr
 export CATALINA_BASE=/usr/local/tomcat
