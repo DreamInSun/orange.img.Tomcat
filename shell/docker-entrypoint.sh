@@ -3,6 +3,10 @@
 
 echo ========== Synchornize System ==========
 #ntpdate us.pool.ntp.org
+echo SERVICE_NAME is $SERVICE_NAME
+echo SERVICE_VERSION is $SERVICE_VERSION
+echo PROFILE is $PROFILE
+echo CONFIG_KEY is $CONFIG_KEY
 
 echo ========== Set Up Environment ==========
 export JRE_HOME=/usr
