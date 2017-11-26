@@ -1,8 +1,8 @@
-# Version 1.0.0
+# Version 1.1.0
 # cyan.img.Tomcat
 
 #========== Basic Image ==========
-From tomcat:8
+From tomcat:8.5.23-jre8
 MAINTAINER "DreamInSun"
 
 #========== Environment ==========
