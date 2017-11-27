@@ -32,7 +32,7 @@ RUN rm -rf 		$CATALINA_HOME/webapps/examples
 EXPOSE 8080 
 
 #========= Add Entry Point ==========
-ADD Dockerfile_tomcat6_jre7/shell /shell
+ADD shell /shell
 RUN chmod a+x /shell/*
 
 #========= Start Service ==========
