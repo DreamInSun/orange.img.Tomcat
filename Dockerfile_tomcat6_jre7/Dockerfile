@@ -24,7 +24,7 @@ RUN ulimit -HSn 4096
 
 #========== Install Application ==========
 #ENV CATALINA_HOME			/usr/local/tomcat
-#ADD tomcat 	  	$CATALINA_HOME
+ADD tomcat 	  	$CATALINA_HOME
 #RUN chmod a+x 	$CATALINA_HOME/bin/catalina.sh
 RUN rm -rf 		$CATALINA_HOME/webapps/docs
 RUN rm -rf 		$CATALINA_HOME/webapps/examples
