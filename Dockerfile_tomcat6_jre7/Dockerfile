@@ -10,6 +10,7 @@ MAINTAINER "DreamInSun"
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 #========== Configuration ==========
+ENV LANG					zh_CN.UTF-8
 #ENV JAVA_OPTS_XMS           128M
 #ENV JAVA_OPTS_XMX           512M
 #ENV JAVA_OPTS_PERM_SIZE      64M
