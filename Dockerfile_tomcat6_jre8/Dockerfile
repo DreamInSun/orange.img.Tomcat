@@ -6,6 +6,7 @@ From java:8-jre
 MAINTAINER "DreamInSun"
 
 #========== Environment ==========
+# Timezone Patch
 #RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 #========== Configuration ========== 

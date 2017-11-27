@@ -91,6 +91,8 @@
 #                   case the default is "true"
 # -----------------------------------------------------------------------------
 
+JAVA_OPTS="$JAVA_OPTS -server -Djava.awt.headless=true -Duser.timezone=GMT+08 -Dfile.encoding=UTF-8 -Xms512m -Xmx2048m -XX:PermSize=256M -XX:MaxPermSize=1024M"
+
 # OS specific support.  $var _must_ be set to either true or false.
 cygwin=false
 os400=false
