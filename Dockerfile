@@ -1,8 +1,9 @@
-# Version 1.1.0
+# Version 1.2.0
 # cyan.img.Tomcat
 
 #========== Basic Image ==========
-From tomcat:8.5.23-jre8
+#From tomcat:8.5.23-jre8
+From cloudesire/tomcat:6-jre7
 MAINTAINER "DreamInSun"
 
 #========== Environment ==========
@@ -21,10 +22,11 @@ ENV PROFILE           product
 RUN ulimit -HSn 4096  
 
 #========== Install Application ==========
-ADD tomcat  /usr/local/tomcat
-RUN chmod a+x /usr/local/tomcat/bin/catalina.sh
-RUN rm -rf /usr/local/tomcat/webapps/docs
-RUN rm -rf /usr/local/tomcat/webapps/examples
+#ENV CATALINA_HOME			/usr/local/tomcat
+ADD tomcat 	  	$CATALINA_HOME
+RUN chmod a+x 	$CATALINA_HOME/bin/catalina.sh
+RUN rm -rf 		$CATALINA_HOME/webapps/docs
+RUN rm -rf 		$CATALINA_HOME/webapps/examples
 
 #========== Expose Ports ==========
 #EXPOSE 8080 
