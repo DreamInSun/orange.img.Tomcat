@@ -1,9 +1,8 @@
-# Version 6-jre7
+# Version 8-jre8
 # cyan.img.Tomcat
 
 #========== Basic Image ==========
-#From tomcat:8.5.23-jre8
-From cloudesire/tomcat:6-jre7
+From tomcat:8.5.23-jre8 
 MAINTAINER "DreamInSun"
 
 #========== Environment ==========
@@ -22,17 +21,17 @@ ENV PROFILE           product
 RUN ulimit -HSn 4096  
 
 #========== Install Application ==========
-#ENV CATALINA_HOME			/usr/local/tomcat
-#ADD tomcat 	  	$CATALINA_HOME
-#RUN chmod a+x 	$CATALINA_HOME/bin/catalina.sh
+ENV CATALINA_HOME			/usr/local/tomcat
+ADD tomcat 	  	$CATALINA_HOME
+RUN chmod a+x 	$CATALINA_HOME/bin/catalina.sh
 RUN rm -rf 		$CATALINA_HOME/webapps/docs
 RUN rm -rf 		$CATALINA_HOME/webapps/examples
 
 #========== Expose Ports ==========
-EXPOSE 8080 
+#EXPOSE 8080 
 
 #========= Add Entry Point ==========
-ADD Dockerfile_tomcat6_jre7/shell /shell
+ADD Dockerfile_tomcat8_jre8/shell /shell
 RUN chmod a+x /shell/*
 
 #========= Start Service ==========

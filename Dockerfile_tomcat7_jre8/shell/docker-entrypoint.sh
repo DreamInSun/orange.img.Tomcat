@@ -9,8 +9,8 @@ echo PROFILE is $PROFILE
 echo CONFIG_KEY is $CONFIG_KEY
 
 echo ========== Set Up Environment ==========
-#export JRE_HOME=/usr
-#export CATALINA_HOME=/usr/local/tomcat
+export JRE_HOME=/usr
+export CATALINA_HOME=/usr/local/tomcat
 
 export CATALINA_BASE=$CATALINA_HOME
 export CATALINA_TMPDIR=$CATALINA_HOME/temp
@@ -28,4 +28,3 @@ echo ========== Database Configuration ==========
 
 echo ========== Start Application ==========
 bash $CATALINA_BASE/bin/catalina.sh run
-#bash /run.sh
