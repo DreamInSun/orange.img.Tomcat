@@ -20,13 +20,15 @@ RUN ulimit -HSn 4096
 
 #========== Install Application ==========
 ADD apache-tomcat-6.0.47	$CATALINA_HOME 
+RUN chmod a+x $CATALINA_HOME/bin/*.sh
+
 
 #========== Expose Ports ==========
 EXPOSE 8080 
 
 #========= Add Entry Point ==========
 ADD shell /shell
-RUN chmod a+x /shell/*
+RUN chmod a+x /shell/*.sh
 
 #========= Start Service ==========
 ENTRYPOINT ["/shell/docker-entrypoint.sh"] 
