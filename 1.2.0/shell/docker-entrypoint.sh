@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 echo ========== Synchornize System ==========
 #ntpdate us.pool.ntp.org
 echo SERVICE_NAME is $SERVICE_NAME
@@ -27,5 +26,4 @@ echo ========== Initialize Database ==========
 echo ========== Database Configuration ========== 
 
 echo ========== Start Application ==========
-# bash $CATALINA_BASE/bin/catalina.sh run
-bash /run.sh
+bash $CATALINA_BASE/bin/catalina.sh run
